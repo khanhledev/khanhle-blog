@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer')
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Khanh Le',
   plugins: [
     {
       use: '@gridsome/source-filesystem',

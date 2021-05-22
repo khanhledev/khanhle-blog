@@ -1,15 +1,21 @@
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold md-5">{{ $page.tag.title }}</h1>
-    <ul class="list-outside list-decs">
+    <h1 class="mb-5 text-2xl font-semibold text-gray-900 dark:text-gray-100">
+      {{ $page.tag.title }}
+    </h1>
+    <h2 v-if="$page.tag.description" class="pb-2 mb-8 text-lg">
+      {{ $page.tag.description }}
+    </h2>
+
+    <ul class="list-disc list-outside">
       <li
         v-for="post in $page.tag.belongsTo.edges"
         :key="post.node.id"
         class="mt-3"
       >
-        <g-link :to="post.page.path"
-          >{{ post.node.title }} - {{ post.node.date }}</g-link
-        >
+        <g-link :to="post.node.path">
+          {{ post.node.title }} – {{ post.node.date }}
+        </g-link>
       </li>
     </ul>
   </Layout>
@@ -19,6 +25,7 @@
 query Tag ($id: ID!) {
   tag: tag (id: $id) {
     title
+    description
     belongsTo {
       totalCount
       edges {

@@ -12,7 +12,10 @@
         {{ tag.title }}
       </g-link>
     </div>
-    <div class="mb-16 markdown" v-html="$page.post.content" />
+    <div
+      class="mt-8 mb-16 prose lg:prose-lg xl:prose-xl markdown"
+      v-html="$page.post.content"
+    />
   </Layout>
 </template>
 

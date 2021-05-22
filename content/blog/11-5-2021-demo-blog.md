@@ -3,6 +3,11 @@ slug: 'first-post'
 date: '2021-05-11'
 title: 'Hipster Ipsum'
 tags: ['backend', 'hipster']
+summary: 'summary'
+image:
+  path: ../media/demo.jpg
+  alt: 'A colorful building against a blue sky background'
+  caption: '<span>Photo by <a href="https://unsplash.com/@victor_g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Victor Garcia</a> on <a href="https://unsplash.com/s/photos/macbook-color?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 ---
 
 # Basics of Markdown
@@ -26,7 +31,9 @@ Markdown is the most popular markup language that can be used to format document
 ```vue
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold mb-2">{{ $page.post.title }}</h1>
+    <h1 class="text-2xl text-gray-900 dark:text-gray-100 font-semibold mb-2">{{
+      $page.post.title
+    }}</h1>
     <span class="font-light">{{ $page.post.date }}</span>
     <div class="mt-8 mb-16 markdown" v-html="$page.post.content" />
   </Layout>

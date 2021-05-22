@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold mb-5">About us</h1>
+    <h1 class="text-2xl text-gray-900 dark:text-gray-100 font-semibold mb-5"
+      >About us</h1
+    >
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur

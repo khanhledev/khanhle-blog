@@ -3,6 +3,7 @@ slug: 'fourth-post'
 date: '2035-07-30'
 title: 'The Future of Design'
 tags: ['future', 'design']
+summary: 'summary'
 ---
 
 # Basics of Markdown
@@ -26,7 +27,9 @@ Markdown is the most popular markup language that can be used to format document
 ```vue
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold mb-2">{{ $page.post.title }}</h1>
+    <h1 class="text-2xl text-gray-900 dark:text-gray-100 font-semibold mb-2">{{
+      $page.post.title
+    }}</h1>
     <span class="font-light">{{ $page.post.date }}</span>
     <div class="mt-8 mb-16 markdown" v-html="$page.post.content" />
   </Layout>

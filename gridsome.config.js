@@ -9,12 +9,23 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = {
   siteName: 'Khanh Le',
+  siteDescription:
+    'Blog about awesome lists, collections of resources around a specific technology.',
+  siteUrl: process.env.DEPLOY_URL || 'https://khanhle.blog',
+  metadata: {
+    author: 'khanh_le',
+    twitter: {
+      site: '@khanh_le',
+      creator: '@khanh_le',
+    },
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
         path: './content/blog/**/*.md',
+        resolveAbsolutePaths: true,
         remark: {
           plugins: [
             [
@@ -29,6 +40,12 @@ module.exports = {
             create: true,
           },
         },
+      },
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/privacy', '/legal'],
       },
     },
   ],

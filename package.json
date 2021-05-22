@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "@tailwindcss/postcss7-compat": "^2.1.2",
@@ -16,7 +17,8 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-shiki": "^0.6.0",
     "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vue-material-design-icons": "^4.11.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^4.5.12",

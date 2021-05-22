@@ -3,3 +3,13 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  .image-caption {
+    @apply mb-5 text-left text-sm;
+  }
+
+  .image-caption a {
+    @apply font-bold;
+  }
+}
